@@ -29,6 +29,7 @@ const Navbar = () => {
     <motion.div
       className='navbar'
       style={{
+        transition: '0.8s ease-in-out',
         borderBottom: border ? `1px solid #404252` : '1px solid #222222',
       }}
     >
