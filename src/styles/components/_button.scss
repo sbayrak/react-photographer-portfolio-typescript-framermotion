@@ -1,0 +1,13 @@
+.btn-link {
+  background-color: $primary;
+  color: $gray-100;
+  padding: $padding * 0.75 $padding * 1.5;
+  border-radius: $radius;
+  border: 2px solid $primary;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $primary-light;
+    border: 2px solid $primary-light;
+  }
+}
