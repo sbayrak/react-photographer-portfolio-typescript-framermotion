@@ -12,15 +12,28 @@ import { ArrowRight, Camera, Close, Menu } from '../../svg';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [border, setBorder] = useState(false);
+  const [backdropFilter, setBackdropFilter] = useState(false);
   const { scrollYProgress, scrollY } = useViewportScroll();
   // const heightChange = useTransform(scrollYProgress, [0, 1], ['10vh', '11vh']);
+  // const backdropFilter = useTransform(
+  //   scrollYProgress,
+  //   [0, 1],
+  //   ['blur(0px)', 'blur(8px)']
+  // );
 
   useEffect(() => {
     const borderBottomFunction = () => {
-      if (scrollY.get() > 50) setBorder(true);
-      else if (scrollY.get() <= 50) setBorder(false);
+      if (scrollY.get() > 50) {
+        setBorder(true);
+        setBackdropFilter(true);
+      } else if (scrollY.get() <= 50) {
+        setBackdropFilter(false);
+        setBorder(false);
+      }
     };
     document.addEventListener('scroll', borderBottomFunction);
+
+    console.log(backdropFilter);
 
     return () => document.removeEventListener('scroll', borderBottomFunction);
   }, [scrollY.get()]);
@@ -30,7 +43,10 @@ const Navbar = () => {
       className='navbar'
       style={{
         transition: '0.8s ease-in-out',
-        borderBottom: border ? `1px solid #404252` : '1px solid #222222',
+        borderBottom: border
+          ? `1px solid #404252`
+          : '1px solid rgba(0,0,0,0.0)',
+        backdropFilter: backdropFilter ? 'blur(8px)' : 'blur(0px)',
       }}
     >
       <motion.div
