@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
+import Home from './components/pages/Home';
 import Button from './components/reusable/Button';
 
 function App() {
@@ -9,22 +10,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route
-          path='/'
-          element={
-            <div
-              style={{
-                height: '200vh',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <Button />
-            </div>
-          }
-        ></Route>
-      </Routes>{' '}
+        <Route path='/' element={<Home />}></Route>
+      </Routes>
     </>
   );
 }

@@ -82,3 +82,31 @@ export const navbarLi: Variants = {
     opacity: 0,
   },
 };
+
+export const welcomerImgContainer: Variants = {};
+
+export const welcomerBackdrop: Variants = {
+  initial: {
+    opacity: 1,
+  },
+  animate: {
+    opacity: 0.2,
+    transition: {
+      duration: 2,
+    },
+  },
+};
+
+export const welcomerImg = (item: string): Variants => {
+  return {
+    initial: {
+      scale: item === 'img' ? 0.99 : item === 'men' ? 1.1 : 1,
+    },
+    animate: {
+      scale: item === 'img' ? 1 : item === 'men' ? 1 : 1.05,
+      transition: {
+        duration: 3,
+      },
+    },
+  };
+};
