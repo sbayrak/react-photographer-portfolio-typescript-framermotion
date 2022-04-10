@@ -66,21 +66,23 @@ export const staggerVariant: Variants = {
   },
 };
 
-export const navbarLi: Variants = {
-  initial: {
-    opacity: 0,
-    y: -10,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
+export const liItem = (item: string): Variants => {
+  return {
+    initial: {
+      opacity: 0,
+      y: item === 'navbar' ? -10 : -30,
     },
-  },
-  exit: {
-    opacity: 0,
-  },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.5,
+      },
+    },
+    exit: {
+      opacity: 0,
+    },
+  };
 };
 
 export const welcomerImgContainer: Variants = {};
@@ -109,4 +111,34 @@ export const welcomerImg = (item: string): Variants => {
       },
     },
   };
+};
+
+export const welcomerText = (type: string): Variants => {
+  return {
+    initial: {
+      // x: type === 'topbottom' ? -10 : -20,
+      opacity: 0,
+    },
+    animate: {
+      // x: 0,
+      opacity: 1,
+      transition: {
+        duration: type === 'topbottom' ? 1 : 6,
+      },
+    },
+  };
+};
+
+export const welcomerTextMid: Variants = {
+  initial: {
+    y: 250,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 2,
+    },
+  },
 };

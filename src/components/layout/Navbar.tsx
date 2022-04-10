@@ -6,7 +6,7 @@ import {
   useTransform,
   useViewportScroll,
 } from 'framer-motion';
-import { navbarFadeIn, navbarLi, staggerVariant } from '../../variants';
+import { navbarFadeIn, liItem, staggerVariant } from '../../variants';
 import { ArrowRight, Camera, Close, Menu } from '../../svg';
 
 const Navbar = () => {
@@ -76,13 +76,13 @@ const Navbar = () => {
             initial='initial'
             animate='animate'
           >
-            <motion.li variants={navbarLi}>
+            <motion.li variants={liItem('navbar')}>
               <Link to='/'>SERVICES</Link>
             </motion.li>
-            <motion.li variants={navbarLi}>
+            <motion.li variants={liItem('navbar')}>
               <Link to='/'>ABOUT</Link>
             </motion.li>
-            <motion.li variants={navbarLi}>
+            <motion.li variants={liItem('navbar')}>
               <Link to='/'>CONTACT</Link>
             </motion.li>
           </motion.ul>
@@ -102,17 +102,17 @@ const Navbar = () => {
                   animate='animate'
                   exit='exit'
                 >
-                  <motion.li variants={navbarLi}>
+                  <motion.li variants={liItem('navbar')}>
                     <Link to='/'>
                       <ArrowRight /> SERVICES
                     </Link>
                   </motion.li>
-                  <motion.li variants={navbarLi}>
+                  <motion.li variants={liItem('navbar')}>
                     <Link to='/'>
                       <ArrowRight /> ABOUT
                     </Link>
                   </motion.li>
-                  <motion.li variants={navbarLi}>
+                  <motion.li variants={liItem('navbar')}>
                     <Link to='/'>
                       <ArrowRight /> CONTACT
                     </Link>
@@ -125,10 +125,10 @@ const Navbar = () => {
                     animate='animate'
                     className='mobile-contact'
                   >
-                    <motion.span variants={navbarLi} id='touch'>
+                    <motion.span variants={liItem('navbar')} id='touch'>
                       Get in touch
                     </motion.span>
-                    <motion.span variants={navbarLi} id='mail'>
+                    <motion.span variants={liItem('navbar')} id='mail'>
                       <a href='mailto:info@sbstudio.com'>info@sbstudio.com</a>
                     </motion.span>
                   </motion.div>

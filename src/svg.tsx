@@ -162,7 +162,7 @@ export const facebook = () => {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth='2'
+      strokeWidth='1.5'
       strokeLinecap='round'
       strokeLinejoin='round'
     >
@@ -185,7 +185,7 @@ export const instagram = () => {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth='2'
+      strokeWidth='1.5'
       strokeLinecap='round'
       strokeLinejoin='round'
     >
@@ -228,7 +228,7 @@ export const twitter = () => {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth='2'
+      strokeWidth='1'
       strokeLinecap='round'
       strokeLinejoin='round'
     >
@@ -251,7 +251,7 @@ export const dribble = () => {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth='2'
+      strokeWidth='1'
       strokeLinecap='round'
       strokeLinejoin='round'
     >
