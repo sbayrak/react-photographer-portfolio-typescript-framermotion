@@ -85,14 +85,29 @@ export const liItem = (item: string): Variants => {
   };
 };
 
-export const welcomerImgContainer: Variants = {};
+export const welcomerImgContainer: Variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 3,
+      when: 'beforeChildren',
+      staggerChildren: 0.4,
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
 
 export const welcomerBackdrop: Variants = {
   initial: {
     opacity: 1,
   },
   animate: {
-    opacity: 0.2,
+    opacity: 0,
     transition: {
       duration: 2,
     },

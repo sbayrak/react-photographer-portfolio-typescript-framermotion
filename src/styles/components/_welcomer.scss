@@ -55,14 +55,15 @@
 
     &__mid {
       width: 100%;
-      height: 50%;
+      height: 60%;
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      border: 2px solid yellow;
     }
     &__title {
       font-size: $font-size * 5;
-      font-family: 'Italiana';
+      font-family: 'Bodoni Moda', serif;
       letter-spacing: 20px;
       font-style: italic;
       font-size: 4;
@@ -70,7 +71,7 @@
     &__bottom {
       border: 2px solid yellow;
       width: 100%;
-      height: 50%;
+      height: 40%;
       display: flex;
       justify-content: space-between;
     }
@@ -82,15 +83,14 @@
       justify-content: flex-end;
       align-items: flex-start;
       float: left;
-      padding: $padding;
+      padding: $padding * 0.5;
     }
     &__span {
       border: 1px solid red;
       float: left;
       font-size: $font-size * 4;
-      font-family: 'Italiana';
+      font-family: 'Bodoni Moda', serif;
       font-weight: 400;
-      letter-spacing: 3px;
       color: $gray-200;
 
       &--active {
@@ -123,9 +123,10 @@
       color: $gray-100;
 
       &:hover {
-        border: 2px solid rgba($color: $gray-200, $alpha: 1);
-        background-color: $gray-200;
+        border: 2px solid rgba($color: $gray-100, $alpha: 1);
+        background-color: $gray-100;
         color: $gray-600;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       }
     }
   }

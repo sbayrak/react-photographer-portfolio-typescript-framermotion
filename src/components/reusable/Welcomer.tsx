@@ -5,6 +5,7 @@ import {
   staggerVariant,
   welcomerBackdrop,
   welcomerImg,
+  welcomerImgContainer,
   welcomerText,
   welcomerTextMid,
 } from '../../variants';
@@ -18,7 +19,7 @@ const Welcomer = () => {
   const parallaxMountain = useTransform(scrollYProgress, [0, 1], [0, 20]);
 
   return (
-    <div className='welcomer-container'>
+    <motion.div className='welcomer-container'>
       <div className='text'>
         <div className='container-lg'>
           <div className='text__mid'>
@@ -88,16 +89,16 @@ const Welcomer = () => {
           </div>
         </div>
       </div>
-      <motion.div
+      {/* <motion.div
         className='img-backdrop'
         variants={welcomerBackdrop}
         initial='initial'
         animate='animate'
-      ></motion.div>
+      ></motion.div> */}
 
       <motion.div
         className='img-container'
-        variants={staggerVariant}
+        variants={welcomerImgContainer}
         initial='initial'
         animate='animate'
       >
@@ -130,7 +131,7 @@ const Welcomer = () => {
           style={{ translateY: parallax2 }}
         />
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -228,7 +228,7 @@ export const twitter = () => {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth='1'
+      strokeWidth='1.5'
       strokeLinecap='round'
       strokeLinejoin='round'
     >
@@ -251,7 +251,7 @@ export const dribble = () => {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth='1'
+      strokeWidth='1.5'
       strokeLinecap='round'
       strokeLinejoin='round'
     >
