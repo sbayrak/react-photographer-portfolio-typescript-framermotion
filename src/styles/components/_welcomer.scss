@@ -38,7 +38,6 @@
   }
 
   .text {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     z-index: 7;
@@ -51,6 +50,8 @@
 
     .container-lg {
       height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     &__mid {
@@ -59,7 +60,12 @@
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      border: 2px solid yellow;
+      @include xs {
+        padding-bottom: $padding * 3;
+      }
+      @include sm {
+        padding-bottom: 0;
+      }
     }
     &__title {
       font-size: $font-size * 5;
@@ -67,16 +73,29 @@
       letter-spacing: 20px;
       font-style: italic;
       font-size: 4;
+      @include xs {
+        font-size: $font-size * 2;
+      }
+      @include sm {
+        font-size: $font-size * 3.5;
+      }
+      @include md {
+        font-size: $font-size * 5;
+      }
     }
     &__bottom {
-      border: 2px solid yellow;
       width: 100%;
       height: 40%;
       display: flex;
       justify-content: space-between;
+      @include xs {
+        flex-direction: column;
+      }
+      @include sm {
+        flex-direction: row;
+      }
     }
     &__desc {
-      border: 2px solid cyan;
       display: flex;
       flex: 1;
       flex-direction: column;
@@ -84,27 +103,55 @@
       align-items: flex-start;
       float: left;
       padding: $padding * 0.5;
+      @include xs {
+        align-items: center;
+      }
+      @include sm {
+        align-items: flex-start;
+      }
     }
     &__span {
-      border: 1px solid red;
       float: left;
       font-size: $font-size * 4;
       font-family: 'Bodoni Moda', serif;
       font-weight: 400;
       color: $gray-200;
+      @include xs {
+        font-size: $font-size * 1.5;
+      }
+      @include sm {
+        font-size: $font-size * 2;
+      }
+      @include md {
+        font-size: $font-size * 4;
+      }
 
       &--active {
         color: $gray-100;
         font-size: $font-size * 4.5;
+        @include xs {
+          font-size: $font-size * 1.5;
+        }
+        @include sm {
+          font-size: $font-size * 2.5;
+        }
+        @include md {
+          font-size: $font-size * 4.5;
+        }
       }
     }
     &__list {
-      border: 2px solid cyan;
       display: flex;
       flex: 1;
       padding: $padding;
       justify-content: flex-end;
       align-items: flex-end;
+      @include xs {
+        justify-content: center;
+      }
+      @include sm {
+        justify-content: flex-end;
+      }
     }
     &__item {
       display: flex;
@@ -121,6 +168,12 @@
       border-radius: 100%;
       transition: 0.2s ease-in-out;
       color: $gray-100;
+      @include xs {
+        margin: 0 $margin;
+      }
+      @include sm {
+        margin-left: $margin;
+      }
 
       &:hover {
         border: 2px solid rgba($color: $gray-100, $alpha: 1);
