@@ -55,7 +55,7 @@ const Welcomer = () => {
                 className='text__span'
                 variants={welcomerText('topbottom')}
               >
-                MOMENTS FOR YOU
+                MOMENTS {/*  FOR YOU */}
               </motion.span>
             </motion.div>
 

@@ -2,6 +2,7 @@
   width: 100%;
   height: 120vh;
   position: relative;
+  border: 1px solid red;
   .img-backdrop {
     position: absolute;
     width: 100%;
@@ -16,6 +17,7 @@
     position: relative;
     z-index: 6;
     overflow: hidden;
+    border: 1px solid red;
 
     img {
       position: absolute;
@@ -23,6 +25,7 @@
       height: 100%;
       object-fit: cover;
       overflow: hidden;
+      border: 1px solid red;
     }
 
     #img-welcomer {
@@ -113,24 +116,28 @@
     &__span {
       float: left;
       font-size: $font-size * 4;
-      font-family: 'Bodoni Moda', serif;
-      font-weight: 400;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
       color: $gray-200;
+      letter-spacing: -2px;
       @include xs {
-        font-size: $font-size * 1.5;
+        font-size: $font-size * 1.75;
+        letter-spacing: 5px;
       }
       @include sm {
         font-size: $font-size * 2;
+        letter-spacing: -2px;
       }
       @include md {
         font-size: $font-size * 4;
+        letter-spacing: -2px;
       }
 
       &--active {
         color: $gray-100;
         font-size: $font-size * 4.5;
         @include xs {
-          font-size: $font-size * 1.5;
+          font-size: $font-size * 1.75;
         }
         @include sm {
           font-size: $font-size * 2.5;
