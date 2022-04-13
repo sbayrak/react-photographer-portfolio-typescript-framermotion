@@ -157,3 +157,36 @@ export const welcomerTextMid: Variants = {
     },
   },
 };
+
+export const cardTextImgsVariantY = (direction: string): Variants => {
+  return {
+    initial: {
+      opacity: 0,
+      y: direction === 'bottom' ? -20 : 20,
+    },
+    whileInView: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 2,
+        delay: 0.4,
+      },
+    },
+  };
+};
+
+export const cardTextImgsVariant: Variants = {
+  initial: {
+    opacity: 0,
+  },
+  whileInView: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      duration: 2,
+      delay: 0.4,
+    },
+  },
+};
